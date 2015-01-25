@@ -1,0 +1,55 @@
+        mFloatView.setOnTouchListener(new OnTouchListener(){
+			@Override
+			public boolean onTouch(View mview, MotionEvent event) {
+				// TODO Auto-generated method stub
+				float x = event.getRawX();  
+	    		float y = event.getRawY()-25;   //25是系统状态栏的高度
+	    		float mTouchStartX = 0;
+	    		float mTouchStartY = 0;
+	    		switch (event.getAction()) {
+	    		case MotionEvent.ACTION_DOWN: //捕获手指触摸按下动作
+	    			//获取相对View的坐标，即以此View左上角为原点
+	    			mTouchStartX =  event.getX(); 
+	    			mTouchStartY =  event.getY();
+	    			break;
+	    		case MotionEvent.ACTION_MOVE:   //捕获手指触摸移动动作           
+	    			wmParams.x=(int) (x-mTouchStartX);
+	    			wmParams.y=(int) (y-mTouchStartY);
+	    			mWindowManager.updateViewLayout(mview, wmParams);  //刷新显示
+	    			break;
+	    		case MotionEvent.ACTION_UP:    //捕获手指触摸离开动作
+	    			wmParams.x=(int) (x-mTouchStartX);
+	    			wmParams.y=(int) (y-mTouchStartY);
+	    			mWindowManager.updateViewLayout(mview, wmParams);  //刷新显示
+	    			mTouchStartX = 0;
+	    			mTouchStartY = 0;
+	    			break;
+	    		}
+				return true;
+			}});
+			
+			
+			
+			mFloatView.setOnTouchListener(new OnTouchListener(){
+        	int lastX, lastY;  
+            int paramX, paramY;
+			@Override
+			public boolean onTouch(View mview, MotionEvent event) {
+				// TODO Auto-generated method stub
+	    		switch (event.getAction()) {
+	    		case MotionEvent.ACTION_DOWN: //捕获手指触摸按下动作
+	    			lastX = (int) event.getRawX();
+	                lastY = (int) event.getRawY();  
+	                paramX = wmParams.x;  
+	                paramY = wmParams.y;
+	    			break;
+	    		case MotionEvent.ACTION_MOVE:   //捕获手指触摸移动动作           
+	    			int dx = (int) event.getRawX() - lastX;  
+	                int dy = (int) event.getRawY() - lastY;  
+	                wmParams.x = paramX + dx;  
+	                wmParams.y = paramY + dy;
+	    			mWindowManager.updateViewLayout(mFloatView, wmParams);  //刷新显示
+	    			break;
+	    		}
+				return true;
+			}});
