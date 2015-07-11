@@ -1,6 +1,0 @@
-# view AndroidManifest.xml #generated:34
--keep class com.raygo.cameravs.FVService { <init>(...); }
-
-# view AndroidManifest.xml #generated:26
--keep class com.raygo.cameravs.MainActivity { <init>(...); }
-

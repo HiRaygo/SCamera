@@ -1,0 +1,77 @@
+<resources>
+
+    <string name="about">About</string>
+    <string name="app_name">Super Camera</string>
+    <string name="autofocus">AutoFocus</string>
+    <string name="autosave">AutoSave</string>
+    <string name="banben">"Version: "</string>
+    <string name="bind">Bind baidu ID</string>
+    <string name="comitttask">Save Setting</string>
+    <string name="everydaydo">Everyday Task</string>
+    <string name="fanhui">Return</string>
+    <string name="fankui">Feedback</string>
+    <string name="lianxi">"Contact: "</string>
+    <string name="moresetting">More settings</string>
+    <string name="previewshow">Preview</string>
+    <string name="previewsize">Preview Size</string>
+    <string name="previewsize0">Large</string>
+    <string name="savepath">Save Path</string>
+    <string name="savepath0">Phone</string>
+    <string name="saveperoid">Save Period</string>
+    <string name="saveperoid0">5 sec</string>
+    <string name="savesize">Save Size</string>
+    <string name="savesize0">Small</string>
+    <string name="setting">System Settings</string>
+    <string name="shareapp">Share</string>
+    <string name="spinnerint">Set Window Size</string>
+    <string name="startfw">Start Service</string>
+    <string name="starttime">Start time</string>
+    <string name="stopfw">Stop Service</string>
+    <string name="stoptime">Stop time</string>
+    <string name="textoff">OFF</string>
+    <string name="texton">ON</string>
+    <string name="timerdo">Timing Photoing</string>
+    <string name="tishi">Tips: Slide to the right to enter setting page</string>
+    <string name="tishib">Tips: Timing Photoing service is running</string>
+    <string name="usehelp">Use Help</string>
+    <string name="zuozhe">Author:</string>
+    <string name="dingshitips">Photoing interver 30 sec, and saved auto.</string>
+    <string name="menu1">Home</string>
+    <string name="menu2">Settings</string>
+    <string name="menu3">Timing Task</string>
+    <string name="menu4">About</string>
+    <string name="none"></string>
+    <string name="xzuozhe">Raygo</string>
+    <string name="xbanben">2.1.1</string>
+    <string name="xlianxi">30s@live.cn</string>
+    <string name="srctime">09:00</string>
+    <string name="dsttime">18:00</string>
+    <string-array name="spinnertext">
+	    <item>Large</item>
+	    <item>Moderate</item>
+        <item>Small</item>
+        <item>Hide</item>	    
+	</string-array>
+    <string-array name="previewsizetext">
+	    <item>Large</item>
+	    <item>Moderate</item>
+        <item>Small</item>   
+	</string-array>
+    <string-array name="savesizetext">
+	    <item>Smallest</item>
+	    <item>Smaller</item>
+	    <item>Moderate</item>
+	    <item>Larger</item>
+        <item>Largest</item>
+	</string-array>
+    <string-array name="peroidtext">
+	    <item>5 sec</item>
+	    <item>15 sec</item>
+        <item>25 sec</item>   
+	</string-array>
+    <string-array name="pathtext">
+	    <item>Phone</item>
+	    <item>SD</item>  
+	</string-array>
+
+</resources>

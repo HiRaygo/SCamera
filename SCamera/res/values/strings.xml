@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">超级相机</string>
+    <string name="previewshow">显示预览窗口</string>
+    <string name="autosave">自动保存照片</string>
+    <string name="tishi">提示：向右滑动可进入设置页面</string>
+    <string name="tishib">提示：定时拍照服务正在后台运行</string>
+    <string name="comitttask">保 存 设 置</string>
+    
+	<string name="spinnerint">设置窗口尺寸:</string>
+	<string-array name="spinnertext">
+	    <item>大</item>
+	    <item>中</item>
+        <item>小</item>
+        <item>隐藏</item>	    
+	</string-array>
+    <string name="texton">开</string>
+    <string name="textoff">关</string>
+    <string name="bind">绑定百度网盘</string>    
+    <string name="setting">系统设置</string>
+    <string name="previewsize">预览窗口大小</string>
+    <string name="previewsize0">大</string>
+    <string-array name="previewsizetext">
+	    <item>大</item>
+	    <item>中</item>
+        <item>小</item>   
+	</string-array>	
+    <string name="savesize">照片保存大小</string>
+    <string name="savesize0">小尺寸</string>
+    <string-array name="savesizetext">
+	    <item>最小</item>
+	    <item>较小</item>
+	    <item>适中</item>
+        <item>较大</item>
+        <item>最大</item>        
+	</string-array>
+    <string name="saveperoid">照片保存周期</string>
+    <string name="saveperoid0">5秒</string>
+    <string-array name="peroidtext">
+	    <item>5秒</item>
+	    <item>15秒</item>
+        <item>25秒</item>   
+	</string-array>
+    <string name="savepath">照片保存目录</string>
+    <string name="savepath0">手机</string>
+    <string-array name="pathtext">
+	    <item>手机</item>
+	    <item>SD卡</item>  
+	</string-array>
+    <string name="moresetting">更多设置</string>
+    <string name="usehelp">使用帮助</string>
+    <string name="startfw">启 动 服 务</string>
+    <string name="stopfw">停 止 服 务</string>    
+    <string name="fanhui">返回</string>    
+    <string name="autofocus">自动聚焦</string>    
+    <string name="timerdo">定时拍照</string>    
+    <string name="starttime">开始时间</string>    
+    <string name="stoptime">停止时间</string>    
+    <string name="shareapp">分享给好友</string>    
+    <string name="about">关于</string>    
+    <string name="none"></string>
+    <string name="zuozhe">APP作者：</string>
+    <string name="banben">版本号：</string>
+    <string name="lianxi">联系方式：</string>
+    <string name="xzuozhe">Raygo</string>
+    <string name="xbanben">2.02</string>
+    <string name="xlianxi">30s@live.cn</string>
+    <string name="srctime">09:00</string>
+    <string name="dsttime">18:00</string>
+    
+    <string name="everydaydo">每天重复任务</string>
+    <string name="fankui">反馈意见</string>
+    <string name="dingshitips">拍照间隔固定为30秒，自动保存照片</string>
+    
+    <string name="menu1">首页</string>
+    <string name="menu2">基本设置</string>
+    <string name="menu3">定时设置</string>
+    <string name="menu4">关于</string>
+</resources>

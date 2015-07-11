@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00ffffff</color>
+    <color name="gray_fornight">#7f7f7f7f</color>
+    <color name="bg_color_a">#fff0f0f0</color>
+    <color name="list_bg">#ffffffff</color>
+    <color name="wait_bg">#ff999999</color>
+    <color name="list_selector">#4c53c1bd</color>
+	<color name="translucent_background">#60000000</color>
+	<color name="white">#FFFFFF</color><!--白色 -->
+	<color name="gray">#EEEEEE</color><!--银灰 --> 
+	<color name="darkslategray">#2F4F4F</color>
+	<color name="black">#000000</color><!--黑色 -->
+	<color name="blackblue">#839FC7</color>
+    <color name="circle_background">#fff2f2f2</color>
+    <color name="line_background">#ffcccccc</color>
+    <color name="done_text_color_normal">#ff333333</color>
+    <color name="done_text_color_disabled">#ffcccccc</color>
+    <color name="blue">#ff33b5e5</color>
+    <color name="darker_blue">#ff0099cc</color>
+    <color name="date_picker_text_normal">#ff999999</color>
+    <color name="calendar_header">#ff999999</color>
+    <color name="date_picker_view_animator">#fff2f2f2</color>
+
+    <color name="ampm_text_color">#8c8c8c</color>
+    <color name="numbers_text_color">#8c8c8c</color>
+
+    <color name="transparent_black">#7F000000</color>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:contentDescription="@string/none"
+    android:gravity="center_vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imageViewabout"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/none"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_launcher_l" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="超级相机 V2.01"
+            android:textColor="#ff000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:lines="7"
+            android:paddingLeft="@dimen/dimleft"
+            android:paddingRight="@dimen/dimleft"
+            android:paddingTop="@dimen/dimleft"
+            android:text="功能介绍：\n1.浮动窗口打开相机，窗口可随意移动\n2.照片可以自动保存\n3.拍照服务后台隐藏，锁屏时也可以拍，节约电量\n4.可设置拍照任务，到时自动开启" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:lines="2"
+            android:maxLines="@integer/number3"
+            android:paddingLeft="@dimen/dimleft"
+            android:text="开发者：Raygo" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical" />
+    </LinearLayout>
+
+</RelativeLayout>
