@@ -74,7 +74,7 @@
     <string name="dingshitips">拍照间隔固定为30秒，自动保存照片</string>
     
     <string name="menu1">首页</string>
-    <string name="menu2">基本设置</string>
-    <string name="menu3">定时设置</string>
+    <string name="menu2">设置</string>
+    <string name="menu3">定时</string>
     <string name="menu4">关于</string>
 </resources>
