@@ -7,7 +7,8 @@
     <string name="tishi">提示：向右滑动可进入设置页面</string>
     <string name="tishib">提示：定时拍照服务正在后台运行</string>
     <string name="comitttask">保 存 设 置</string>
-    
+    <string name="notification_title">超级相机</string>
+    <string name="notification_content">正在运行...</string>
 	<string name="spinnerint">设置窗口尺寸:</string>
 	<string-array name="spinnertext">
 	    <item>大</item>

@@ -11,6 +11,9 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
@@ -28,6 +31,7 @@ import android.hardware.Camera.Size;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.IBinder;
+import android.support.v4.app.NotificationCompat;
 import android.text.format.Time;
 import android.util.Log;
 import android.view.Gravity;
@@ -83,6 +87,19 @@ public class FVService extends Service
 		}
 		getParas();
 		createFloatView();
+		//Í¨ÖªÀ¸
+		Intent notificationIntent = new Intent(this, MenuActivity.class);
+		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+		NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
+		Notification notification = builder.setContentIntent(pendingIntent)
+				.setWhen(System.currentTimeMillis())
+				.setTicker(getText(R.string.notification_title))
+				.setSmallIcon(R.drawable.ic_launcherm)
+				.setContentTitle(getText(R.string.notification_title))
+				.setContentText(getText(R.string.notification_content)).build();
+		notification.flags |= Notification.FLAG_ONGOING_EVENT;
+		((NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE)).notify(0,notification);
 		
 		Timer timer = new Timer();
 		if(AutoSave)
@@ -325,8 +342,10 @@ public class FVService extends Service
     			File file = new File(savefoder, photoFile);
     			
     			FileOutputStream outStream = new FileOutputStream(file);
-    			bitmap.compress(CompressFormat.PNG, 100, outStream);
+    			bitmap.compress(CompressFormat.PNG, 30, outStream);
     			outStream.close();
+    			bitmap.recycle();
+    			bitmap = null;
     			
     			mCamera.stopPreview();
     			mCamera.startPreview();
@@ -423,6 +442,7 @@ public class FVService extends Service
 		{
 			mWindowManager.removeView(mFloatLayout);
 		}
+		((NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE)).cancel(0);
 	}
 	
 }

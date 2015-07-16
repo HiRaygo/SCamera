@@ -9,7 +9,7 @@ package com.special.ResideMenu;
 public final class R {
 	public static final class drawable {
 		public static final int ic_launcher = 0x7f020009;
-		public static final int shadow = 0x7f020015;
+		public static final int shadow = 0x7f020016;
 	}
 	public static final class id {
 		public static final int iv_background = 0x7f0a0020;
