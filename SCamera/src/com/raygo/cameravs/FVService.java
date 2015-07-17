@@ -62,7 +62,6 @@ public class FVService extends Service
 	private long SavePeroid;
 	private int PictureWidth;
 	private int PictureHeight;
-	private Boolean isSaving;
 	private String savedFile = null;
 	private String savepath = null;
 	private Boolean isTimerTask = false;
@@ -80,7 +79,6 @@ public class FVService extends Service
 	public void onStart(Intent intent, int startId)
 	{
 		isTimerTask = intent.getBooleanExtra("IsTimerTask", false);
-		isSaving = false;
 		if((mFloatLayout != null) & (mWindowManager != null))
 		{
 			mWindowManager.removeView(mFloatLayout);
@@ -329,33 +327,50 @@ public class FVService extends Service
 
 	}
 		
-    //Save the pic
+    //Save photo
 	private final class TakePictureCallback implements PictureCallback {
 		
     	public void onPictureTaken(byte[] data, Camera camera) {
-        	try {
-    			Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);    			
-    			
-    			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
-    	        String date = dateFormat.format(new Date());
-    	        String photoFile = date + ".png";
-    			File file = new File(savefoder, photoFile);
-    			
-    			FileOutputStream outStream = new FileOutputStream(file);
-    			bitmap.compress(CompressFormat.PNG, 30, outStream);
-    			outStream.close();
-    			bitmap.recycle();
-    			bitmap = null;
-    			
-    			mCamera.stopPreview();
-    			mCamera.startPreview();
-    			savedFile = photoFile;
-				isSaving = true;
-    		} catch (Exception e) {
-    			e.printStackTrace();
-    		}
+    		SavePicThread mythread = new SavePicThread(data);
+    		mythread.setDaemon(true);
+    		mythread.start();
+    		
+			mCamera.stopPreview();
+			mCamera.startPreview();    			
         }
     };
+    
+    //Save picture thread
+    public class SavePicThread extends Thread
+    {
+        private byte[] data;
+        public SavePicThread(byte[] idata)
+        {
+            this.data = idata;
+        }
+        
+        public void run()
+        {  
+        	Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);    			
+			
+			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+	        String date = dateFormat.format(new Date());
+	        String photoFile = date + ".png";
+			File file = new File(savefoder, photoFile);
+			
+			try{
+				FileOutputStream outStream = new FileOutputStream(file);
+				bitmap.compress(CompressFormat.JPEG, 100, outStream);
+				outStream.close();
+			}
+			catch(Exception ex){
+				
+			}
+			bitmap.recycle();
+			bitmap = null;
+			savedFile = photoFile;
+        }
+    }
     
     //Start the camera
     private final class SurfaceCallback implements SurfaceHolder.Callback {
@@ -436,7 +451,6 @@ public class FVService extends Service
 	{
 		// TODO Auto-generated method stub
 		super.onDestroy();
-		isSaving = false;
 		Toast.makeText(FVService.this, "Service is stopped.", Toast.LENGTH_SHORT).show();
 		if(mFloatLayout != null)
 		{
